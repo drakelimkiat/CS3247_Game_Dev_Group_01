@@ -2,9 +2,9 @@
 
 #pragma once
 
+#include "EnemyAverageJoe.h"
 #include "CoreMinimal.h"
 #include "Engine/LevelScriptActor.h"
-#include "EnemyAverageJoe.h"
 #include "AiSubLevelScriptActor.generated.h"
 
 /**
