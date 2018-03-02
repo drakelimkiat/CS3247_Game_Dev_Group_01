@@ -23,15 +23,15 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Custom)
 	void SpawnEnemyAverageJoe();
 	
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = AiSubLevel)
 	float SpawnEnemyRadius;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = AiSubLevel)
 	TSubclassOf<AEnemyAverageJoe> BpEnemyAverageJoe;
-
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
 
 private:
 	FTimerHandle MemberTimerHandle;

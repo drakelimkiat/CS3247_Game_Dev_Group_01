@@ -2,6 +2,7 @@
 
 #include "EnemyAverageJoe.h"
 #include "EnemyAverageJoeMovementComponent.h"
+#include "BehaviorTree/BehaviorTree.h"
 
 
 // Sets default values
@@ -17,6 +18,8 @@ AEnemyAverageJoe::AEnemyAverageJoe(const FObjectInitializer &ObjectInitializer)
 void AEnemyAverageJoe::BeginPlay()
 {
 	Super::BeginPlay();
+
+	SpawnDefaultController();
 	
 }
 
@@ -32,5 +35,10 @@ void AEnemyAverageJoe::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+}
+
+UBehaviorTree* AEnemyAverageJoe::GetBehaviorTree() const
+{
+	return BehaviorTree;
 }
 
